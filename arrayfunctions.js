@@ -68,12 +68,28 @@ var animals = ['cow','dog','elephant','camel','tiger'];
 console.log(animals.slice(1));/*The slice() returns the portion of the array into a new array*/
 console.log(animals.slice(1,4));
 
-
-
-
 const array6 = [1, 2, 3, 4];
 const reducer = function(accumulator, currentValue){
 console.log(accumulator,currentValue);
 return accumulator + currentValue
 };
-console.log(array6.reduce(reducer));
+console.log(array6.reduce(reducer));/*work like fibnocci series*/
+
+
+function isBelowThreshold(currentValue) {
+  return currentValue < 40;
+}
+var array1 = [1, 30, 39, 29, 10, 13];
+console.log(array1.every(isBelowThreshold));/*The every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.*/
+
+
+var months = ['Jan', 'March', 'April', 'June'];
+months.splice(1, 0, 'Feb');/*The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements*/
+// inserts at index 1
+console.log(months);
+// expected output: Array ['Jan', 'Feb', 'March', 'April', 'June']
+months.splice(4, 1, 'May');
+// replaces 1 element at index 4
+console.log(months);
+// expected output: Array ['Jan', 'Feb', 'March', 'April', 'May']
+
